@@ -73,20 +73,12 @@ dnl fi
 
 AM_CONDITIONAL(HAVE_RAVEVIS, [test x${have_ravevis} = xyes])
 
-# LCIO EventGenerator plugin, with no .pc file
-#AC_CHECK_FILE(${LCIO}/src/cpp/include/lcio.h,[have_lcio=yes],[have_lcio=no])
-#AC_SUBST([LCIO],[${LCIO}])
-#AC_SUBST([LCIO_CFLAGS],[-I${LCIO}/src/cpp/include/])
-#AC_SUBST([LCIO_LIBS],['-L${LCIO}/lib/ -llcio -L${LCIO}/sio/lib -lsio'])
-#AM_CONDITIONAL(HAVE_LCIO, [test x${have_lcio} = xyes])
-
 # LCIO EventGenerator plugin, with pkgconfig
-have_lcio=yes
-PKG_CHECK_MODULES(LCIO, lcio, [], [have_lcio=no])
+PKG_CHECK_MODULES(LCIO, lcio, [have_lcio=yes], [have_lcio=no])
 #AC_CEDAR_LIBRARYANDHEADERS([LCIO], [?.?.?.?], [have_lcio=yes], [have_lcio=no])
 AC_ARG_ENABLE([lcio],[AC_HELP_STRING([--disable-lcio],[disable lcio plugin])],
-		[have_lcio=$enableval],[have_lcio=yes])
-AM_CONDITIONAL(HAVE_LCIO, [test "x${have_lcio}" = "xyes"])
+		[have_lcio=$enableval])
+AM_CONDITIONAL([HAVE_LCIO], [test "x${have_lcio}" = "xyes"])
 
 AC_ARG_ENABLE([python],
   [AC_HELP_STRING([--disable-python],[disable python interfaces])],

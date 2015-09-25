@@ -1,38 +1,14 @@
 AM_CPPFLAGS = -I$(top_srcdir) $(RAVE_CFLAGS) -DVERTIGO_PLUGIN_DIR=\"$(pkglibdir)\" $(BOOST_CPPFLAGS) $(DATAHARVESTER_CFLAGS)
 
-bin_PROGRAMS = vertigo
-
-vertigo_SOURCES = main/main.cpp main/sigsegv.c
-vertigo_LDADD = libVertigo.la \
-	../VertigoHarvest/libVertigoHarvest.la \
-	../Environment/libVertigoEnvironment.la \
-	../tools/libVertigoTools.la \
-	../Analysis/libVertigoAnalysis.la
-vertigo_LDFLAGS = $(RAVE_LIBS) -ldl  $(BOOST_FILESYSTEM_LIB) $(BOOST_LDFLAGS) $(BOOST_PROGRAM_OPTIONS_LIB) $(BOOST_SYSTEM_LIB) 
-
-../Environment/libVertigoEnvironment.la:
-	cd ../Environment && make libVertigoEnvironment.la
-
-../Analysis/libVertigoAnalysis.la:
-	cd ../Analysis && make libVertigoAnalysis.la
-
-../VertigoHarvest/libVertigoHarvest.la:
-	cd ../VertigoHarvest && make libVertigoHarvest.la
-
-../tools/libVertigoTools.la:
-	cd ../tools && make libVertigoTools.la
-
-
-##############################################
-
 lib_LTLIBRARIES = libVertigo.la
 
-libVertigo_la_LDFLAGS = $(RAVE_LIBS) -ldl $(CLHEPLIBPATH) $(BOOST_LDFLAGS) $(BOOST_FILESYSTEM_LIB) $(BOOST_PROGRAM_OPTIONS_LIB)
+## libVertigo_la_LDFLAGS = $(RAVE_LIBS) -ldl $(CLHEPLIBPATH) $(BOOST_LDFLAGS) $(BOOST_FILESYSTEM_LIB) $(BOOST_PROGRAM_OPTIONS_LIB) $(PLATFORMLDFLAGS) -l$(CLHEPLIBNAME) 
 
-libVertigo_la_LIBADD = -l$(CLHEPLIBNAME) \
+libVertigo_la_LIBADD = \
 	../Environment/libVertigoEnvironment.la \
 	../Analysis/libVertigoAnalysis.la \
 	../VertigoHarvest/libVertigoHarvest.la
+
 libVertigo_la_SOURCES = \
   main/Version.cc \
 	Event/src/EventCombiner.cc \
@@ -59,6 +35,32 @@ libVertigo_la_SOURCES = \
 	EventLoop/src/LoopSettings.cc \
 	EventGeneration/src/GeneratorManager.cc \
 	EventGeneration/src/EventFactory.cc
+
+
+bin_PROGRAMS = vertigo
+
+vertigo_SOURCES = main/main.cpp main/sigsegv.c
+vertigo_LDADD = libVertigo.la \
+	../VertigoHarvest/libVertigoHarvest.la \
+	../Environment/libVertigoEnvironment.la \
+	../tools/libVertigoTools.la \
+	../Analysis/libVertigoAnalysis.la
+vertigo_LDFLAGS = $(RAVE_LIBS) -ldl  $(BOOST_FILESYSTEM_LIB) $(BOOST_LDFLAGS) $(BOOST_PROGRAM_OPTIONS_LIB) $(BOOST_SYSTEM_LIB) 
+
+../Environment/libVertigoEnvironment.la:
+	cd ../Environment && make libVertigoEnvironment.la
+
+../Analysis/libVertigoAnalysis.la:
+	cd ../Analysis && make libVertigoAnalysis.la
+
+../VertigoHarvest/libVertigoHarvest.la:
+	cd ../VertigoHarvest && make libVertigoHarvest.la
+
+../tools/libVertigoTools.la:
+	cd ../tools && make libVertigoTools.la
+
+
+##############################################
 
 noinst_HEADERS = \
   main/Version.h \
