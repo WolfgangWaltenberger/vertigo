@@ -1,0 +1,19 @@
+(-0.0013, 0.0005, 0.9964)
+(0.2979, 0.1827, 0.9452)
+(0.2860, 0.1744, 0.9482)
+(-0.1895, -0.0521, 1.3539)
+(-0.4919, -0.1392, 1.8841)
+5 jets in event.
+13 tracks in event.
+9 tracks in jet.
+0 tracks in jet.
+4 tracks in jet.
+0 tracks in jet.
+0 tracks in jet.
+2 vertices with all tracks
+Vtx Pos: (0.0001, 0.0002, 0.9968)
+Vtx Pos: (0.1243, 0.0406, 0.9860)
+4 primary tracks.
+2 vertices with all tracks
+Vtx Pos: (0.0001, 0.0002, 0.9968)
+Vtx Pos: (0.2673, 0.1619, 0.9554)

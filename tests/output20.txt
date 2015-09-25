@@ -1,0 +1,34 @@
+running vertigo/tests/test6.py ...
+[0;32m[LoopSettings] Verbosity is 100 (20 in rave units).[;0m
+[0;32m[LoopSettings] Will log ImportantInfo, Error, Warning, Info, Debug.[;0m
+[0;32m[BeamSpotSingleton] Currently beamspot info is "split up"[;0m
+[0;32m[BeamSpotSingleton::set]  rxx[um]=15 |rxy|[um]=0 ryy[um]=15 rzz[um]=53000[;0m
+[0;32m[BeamSpotSingleton] Currently beamspot info is "split up"[;0m
+[0;32m[BeamSpotSingleton::set]  rxx[um]=15 |rxy|[um]=0 ryy[um]=15 rzz[um]=53000[;0m
+
+reconstructing the vertex using method 'kalman' 2
+id: 7, position: (0.0011, 0.0013, -0.0008) chi2= 0.165  ntrks= 2
+
+reconstructing the vertex using method 'kalman' with beamspot 2
+id: 8, position: (0.0007, 0.0009, -0.0009) chi2= 1.012  ntrks= 2
+
+reconstructing the decay chain for 2 particles
+  top particle  :  (0.001052, 0.001255, -0.000844 , -88.534668, -44.648327, -11.350409, 90.983887 )
+  vertex:       (0.0011, 0.0013, -0.0008)
+  children:
+    -   :  (0.001052, 0.001255, -0.000844 , -31.240871, 13.047634, 28.725622, 0.105658 )
+    -   :  (0.001052, 0.001255, -0.000844 , -57.293793, -57.695961, -40.076031, 0.105658 )
+
+reconstructing the decay chain for 2 particles, with beamspot
+  top particle  :  (0.000716, 0.000918, -0.000916 , -88.534668, -44.648323, -11.350409, 90.983887 )
+  vertex:       (0.0007, 0.0009, -0.0009)
+  children:
+    -   :  (0.000716, 0.000918, -0.000916 , -31.240871, 13.047636, 28.725622, 0.105658 )
+    -   :  (0.000716, 0.000918, -0.000916 , -57.293797, -57.695957, -40.076031, 0.105658 )
+
+applying the mass constraint Zmass =  91.187
+  top particle  :  (0.001052, 0.001254, -0.000844 , -88.764305, -44.842251, -11.468611, 91.192200 )
+  vertex:       (0.0011, 0.0013, -0.0008)
+  children:
+    -   :  (0.000637, 0.001428, -0.000463 , -31.267315, 13.058941, 28.750238, 0.626371 )
+    -   :  (0.000883, 0.001084, -0.000963 , -57.496998, -57.901192, -40.218849, 0.360703 )

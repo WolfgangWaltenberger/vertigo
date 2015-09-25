@@ -1,0 +1,96 @@
+\subsection{VertexAssociators}
+
+
+\verb/VertexAssociator/ classes are classes which associate simulated and
+ reconstructed vertices, which is essential to evaluate vertex
+ reconstruction efficiencies and the fake rates of the various
+ reconstructors.
+Their abstract base class is \verb/VertexAssociator/, and the relevant methods are:
+
+\begin{verbatim}
+  vector<const RecVertex *> recVertices(const TkSimVertex&)
+  vector<const TkSimVertex *> simVertices(const RecVertex&)
+  \end{verbatim}
+
+These return the appropriate container of vertices which are associated to
+ the input vertex.
+If more than one vertex is associated, the first element of the container
+ ({\tt front()}) is the best association.
+
+The two concrete implementations provided in the package 
+\verb/VertexAssociation/ are:
+
+\begin{itemize}
+\item {\tt VertexAssociatorByTracks}: \\
+ associates two vertices if the fraction of tracks in common is greater or
+ equal a threshold set by\\ {\tt
+ VertexAssociatorByTracks:FractionOfAssociatedTracks}.\\ 
+ The default value is 50\%, meaning that for vertices with two good
+ tracks, one associated track is enough.
+ Only reconstructed {\tt TkSimTracks}, i.e.\ associated to a
+  \verb/RecTracks/,  are considered in the fraction,
+  thus defining an algorithmic efficiency. 
+  The track associator to use, and the collection of all simulated and
+ reconstructed vertices has to be given at construction:
+  \begin{verbatim}
+VertexAssociatorByTracks(const vector<const TkSimVertex *> &, 
+  const vector<const RecVertex *> & ,const TrackAssociator &)
+  \end{verbatim}
+
+\item {\tt VertexAssociatorByDistance}: \\
+associates vertices according to the distance between them.
+The associated vertices are ordered by increasing order of distance. 
+The algorithm to compute that distance (as an implementation of
+ \verb/VertexDistance/~\ref{vertex_distance}) has to be given with the method:
+\begin{verbatim}
+set_distance(VertexDistance * vertexDistance)
+\end{verbatim}
+
+\end{itemize}
+
+Usage example for the  {\tt VertexAssociatorByTracks}:
+\begin{verbatim}
+  vector<const TkSimVertex *> theVectorOfSimVertices = ...
+  vector<const RecVertex *> theVectorOfRecVertices = ...
+
+  TdrTrackAssociatorByHits trackAssociator(simTracks, recTracks);
+
+  VertexAssociatorByTracks vertexAssociator(theVectorOfSimVertices,
+    	      theVectorOfRecVertices, trackAssociator);
+
+  vector<const TkSimVertex *> assoSimV =
+  vertexAssociator.simVertices(aRecVertex);
+
+\end{verbatim}
+
+The class \verb/VertexAssociationToolsFactory/ creates consistent
+ VertexAssociator and TrackAssociator objects for estimation of vertex
+ finding performance.
+It allows to choose between Associators at runtime via
+ the SimpleConfigurable mechanism.
+The SimpleConfigurables used are called:
+
+\begin{itemize}
+\item \verb/VertexAssociationToolsFactory:VertexAssociator/:\\
+Selects the type of \verb/VertexAssociator/, and 
+ takes either \verb/ByTracks/ or \verb/ByDistance/ as its argument.
+\item \verb/VertexAssociationToolsFactory:TrackAssociator/:\\
+Selects the type of \verb/TrackAssociator/, and 
+ takes either \verb/ByHits/ or \verb/ByPulls/ as its argument.
+\end{itemize}
+
+% Is this for a single event only?
+
+\subsection{Typedefs}
+Some typedefs of general use are defined within the name-space
+\verb/VertexAssociator/:
+%
+\begin{verbatim}
+typedef vector$<$const RecVertex*$>$ RecVertexPtrContainer;
+typedef vector$<$const TkSimVertex*$>$ SimVertexPtrContainer;
+typedef vector$<$const RecVertex$>$ RecVertexContainer; 
+typedef vector$<$const TkSimVertex$>$SimVertexContainer;
+\end{verbatim}
+%
+and should always be referenced as in
+\verb/VertexAssociator::SimVertexContainer/.

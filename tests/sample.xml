@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?><!DOCTYPE Calibration> 
+<Calibration> 
+<CombinedCategory TaggingVariable="0" JetPtMin="0.000000" JetPtMax="40.000000" JetEtaMin="0.000000" JetEtaMax="1.200000" VertexType="0" PartonType="0"> 
+   <CalibratedHistogram overFlowValue="0" size="5"> 
+      <Bin uLimit="-0.500000" value="0.000000"/> 
+      <Bin uLimit="0.500000" value="0.492057"/> 
+      <Bin uLimit="1.500000" value="0.036845"/> 
+      <Bin uLimit="2.500000" value="0.471098"/> 
+      <Bin uLimit="3.500000" value="0.000000"/> 
+      </CalibratedHistogram> 
+   </CombinedCategory> 
+<CombinedCategory TaggingVariable="0" JetPtMin="0.000000" JetPtMax="40.000000" JetEtaMin="0.000000" JetEtaMax="1.200000" VertexType="0" PartonType="1"> 
+   <CalibratedHistogram overFlowValue="0" size="5"> 
+      <Bin uLimit="-0.500000" value="0.000000"/> 
+      <Bin uLimit="0.500000" value="0.155727"/> 
+      <Bin uLimit="1.500000" value="0.019259"/> 
+      <Bin uLimit="2.500000" value="0.825014"/> 
+      <Bin uLimit="3.500000" value="0.000000"/> 
+      </CalibratedHistogram> 
+   </CombinedCategory> 
+</Calibration> 

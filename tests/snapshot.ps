@@ -1,0 +1,37 @@
+%!PS-Adobe-2.0 EPSF-1.2
+%%BoundingBox: 0 436 679 792
+%%Creator: Coin <http://www.coin3d.org>
+%%EndComments
+
+/origstate save def
+
+% workaround for bug in some PS interpreters
+% which doesn't skip the ASCII85 EOD marker.
+/~ {currentfile read pop pop} def
+
+/image_wd 905 def
+/image_ht 474 def
+/pos_wd 905 def
+/pos_ht 474 def
+/image_dpi 96.0757 def
+/image_scale 72 image_dpi div def
+/image_chan 3 def
+/xpos_offset 0 image_scale mul def
+/ypos_offset 0 image_scale mul def
+/pix_buf_size 2715 def
+
+/page_ht 11 72 mul def
+/page_wd 8.5 72 mul def
+/image_xpos 0 def
+/image_ypos page_ht pos_ht image_scale mul sub def
+image_xpos xpos_offset add image_ypos ypos_offset add translate
+
+/pix pix_buf_size string def
+image_wd image_scale mul image_ht image_scale mul scale
+
+image_wd image_ht 8
+[image_wd 0 0 image_ht 0 0]
+currentfile
+/ASCII85Decode filter
+false 3
+colorimage

@@ -1,0 +1,11 @@
+Simple btagging test, but now with beamspot constraint!
+[0;32m[LoopSettings] Verbosity is 255 (51 in rave units).[;0m
+[0;32m[LoopSettings] Will log ImportantInfo, Error, Warning, Info, Debug.[;0m
+[0;32m[VertexFactory]  factory called w/o beamspot![;0m
+[0;32m[BeamSpotSingleton] Currently beamspot info is "split up"[;0m
+[0;32m[BeamSpotSingleton::set]  rxx[um]=15 |rxy|[um]=0 ryy[um]=15 rzz[um]=53000[;0m
+2 jets. Primary vertex at  (-0.0012, -0.0014, 8.0140)
+FIXME: check track filter!
+Tagging jet: b -1.0000 jet axis: (-40.8725, 27.4721, -33.4809) (pt 49.2471) 13 tracks
+FIXME: check track filter!
+Tagging jet: b 2.6456 jet axis: (140.0683, -184.2364, 113.5029) (pt 231.4350) 11 tracks

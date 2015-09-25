@@ -1,0 +1,20 @@
+\hline
+
+%---------------------------------------------------------
+VertexAssociationToolsFactory:VertexAssociator &
+string &
+ByTracks &
+VertexAssociationToolsFactory &
+In standard vertex finding tests, defines the type of vertex association. 
+{\bf ByTracks:} by number of tracks in common between sim and rec vertex; 
+{\bf ByDistance:} to the closest sim (respectively rec) vertex. \\
+%---------------------------------------------------------
+VertexAssociatorByTracks:purityCut &
+float &
+0.50001 &
+VertexAssociationToolsFactory &
+Cut on the fraction of tracks shared by sim and rec vertex, 
+below which no association is made. \\
+%---------------------------------------------------------
+
+\hline

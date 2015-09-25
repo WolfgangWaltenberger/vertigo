@@ -1,0 +1,22 @@
+Extensively test the ParameterSet building
+
+    string: "avr"
+toString(): "finder:avr"
+finder = avr
+
+    string: "finder:avr-sigmacut:3.0-Tini:256"
+toString(): "Tini:256-finder:avr-sigmacut:3"
+Tini = 256
+finder = avr
+sigmacut = 3.
+
+    string: "avr-sigmacut:-3.0-Tini:256"
+toString(): "Tini:256-finder:avr-sigmacut:-3"
+Tini = 256
+finder = avr
+sigmacut = -3.
+
+    string: "mvf-ini:(bseeder)"
+toString(): "finder:mvf-ini:(finder:bseeder)"
+finder = mvf
+ini = finder:bseeder

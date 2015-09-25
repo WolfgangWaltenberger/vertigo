@@ -1,0 +1,14 @@
+Test with neutrals
+kalman:
+pos=( -0.0014, -0.0022, 0.5235 ) chi2=15.449 ntrks=10
+avf-smoothing:0:
+pos=( -0.0004, -0.0023, 0.5237 ) chi2=13.742 ntrks=10
+avf-smoothing:1:
+pos=( -0.0004, -0.0023, 0.5237 ) chi2=13.742 ntrks=10
+avr:
+pos=( -0.0004, -0.0023, 0.5237 ) chi2=13.742 ntrks=10
+tkf:
+pos=( 0.0043, -0.0029, 0.5248 ) chi2=8.779 ntrks=9
+mvf:
+pos=( -0.0085, -0.0013, 0.5200 ) chi2=3.822 ntrks=10
+pos=( 0.0082, -0.0039, 0.5264 ) chi2=4.198 ntrks=10

@@ -1,0 +1,18 @@
+import glob, os
+
+Import( 'env' )
+
+this_name = os.path.split( os.getcwd() )[1]
+filenames = glob.glob( os.path.join( env.GetLaunchDir(), this_name, '*', 'src', '*.cc' ) )
+if filenames != []:
+    filenames = [ apply( os.path.join, tuple( x.split( os.path.sep )[-3:] ) ) for x in filenames ]
+    object_list = env.SharedObject( filenames )
+    if env['precompile']:
+        env.Depends( object_list, env.pcheader )
+    env.object_collector  += object_list
+    lib = env.SharedLibrary( 'Vertigo' + this_name, object_list )
+    env.Default( lib )
+else:
+    print 'Warning: No source files found in subdirectory',this_name
+
+Export( 'env' )

@@ -1,0 +1,12 @@
+<export>
+ <lib name=VertigoVertigoHarvester>
+ <use name=RaveBase/RaveInterface>
+ <use name=Vertigo/DataHarvesting>
+ <use name=Vertigo/VertigoMCTruth>
+</export>
+
+<flags CXXFLAGS="-DWITH_HARVESTER">
+<flags CXXFLAGS="-DHARVESTER_FULL_PATHNAMES">
+<use name=RaveBase/RaveInterface>
+<use name=Vertigo/DataHarvesting>
+<use name=Vertigo/VertigoMCTruth>

@@ -1,0 +1,13 @@
+usr/lib/lib*
+usr/bin/*
+# usr/share/*
+
+# dh_install doesnt eat modern globs
+# usr/lib/vertigo/obs_!(*Visualiser*)
+
+usr/lib/vertigo/evtgen_file*
+usr/lib/vertigo/evtgen_gun*
+usr/lib/vertigo/obs_[A-U]*
+usr/lib/vertigo/obs_Ve*
+usr/lib/vertigo/skin_*
+# usr/lib/vertigo/obs_[W-Z]*

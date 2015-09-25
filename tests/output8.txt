@@ -1,0 +1,39 @@
+[avr]
+Vtx Pos: (-0.0009, 0.0022, -2.2675) chi2=11.077 ndf=11.137
+w=0.000   Orig.pz(): -1.972   Refitted.pz(): -1.972
+w=0.486   Orig.pz(): -1.204   Refitted.pz(): -1.204
+w=0.560   Orig.pz(): -4.380   Refitted.pz(): -4.380
+w=0.610   Orig.pz(): -1.273   Refitted.pz(): -1.273
+w=0.634   Orig.pz(): -0.641   Refitted.pz(): -0.641
+w=0.687   Orig.pz(): -1.045   Refitted.pz(): -1.045
+w=0.752   Orig.pz(): -2.788   Refitted.pz(): -2.788
+w=0.818   Orig.pz(): -2.581   Refitted.pz(): -2.581
+w=0.827   Orig.pz(): -2.663   Refitted.pz(): -2.663
+w=0.844   Orig.pz(): -2.504   Refitted.pz(): -2.504
+w=0.850   Orig.pz(): -2.866   Refitted.pz(): -2.866
+Vtx Pos: (0.2787, 0.1251, -2.6552) chi2=5.148 ndf=4.693
+w=0.011   Orig.pz(): -1.714   Refitted.pz(): -1.714
+w=0.901   Orig.pz(): -1.972   Refitted.pz(): -1.972
+w=0.966   Orig.pz(): -2.270   Refitted.pz(): -2.270
+w=0.981   Orig.pz(): -2.181   Refitted.pz(): -2.181
+w=0.988   Orig.pz(): -1.709   Refitted.pz(): -1.709
+
+[avf]
+Vtx Pos: (-0.0010, 0.0022, -2.2676) chi2=10.957 ndf=11.242
+w=0.000   Orig.pz(): -1.972   Refitted.pz(): -1.972
+w=0.453   Orig.pz(): -1.204   Refitted.pz(): -1.204
+w=0.538   Orig.pz(): -4.380   Refitted.pz(): -4.380
+w=0.592   Orig.pz(): -1.273   Refitted.pz(): -1.273
+w=0.668   Orig.pz(): -0.641   Refitted.pz(): -0.641
+w=0.688   Orig.pz(): -1.045   Refitted.pz(): -1.045
+w=0.781   Orig.pz(): -2.788   Refitted.pz(): -2.788
+w=0.819   Orig.pz(): -2.581   Refitted.pz(): -2.581
+w=0.849   Orig.pz(): -2.663   Refitted.pz(): -2.663
+w=0.864   Orig.pz(): -2.504   Refitted.pz(): -2.504
+w=0.868   Orig.pz(): -2.866   Refitted.pz(): -2.866
+Vtx Pos: (0.2787, 0.1251, -2.6552) chi2=5.148 ndf=4.693
+w=0.011   Orig.pz(): -1.714   Refitted.pz(): -1.714
+w=0.901   Orig.pz(): -1.972   Refitted.pz(): -1.972
+w=0.966   Orig.pz(): -2.270   Refitted.pz(): -2.270
+w=0.981   Orig.pz(): -2.181   Refitted.pz(): -2.181
+w=0.988   Orig.pz(): -1.709   Refitted.pz(): -1.709

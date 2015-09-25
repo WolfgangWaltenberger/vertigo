@@ -1,0 +1,4 @@
+<export>
+ <lib name=VertigoVertigoMCTruth>
+ <use name=RaveBase/RaveInterface>
+</export>

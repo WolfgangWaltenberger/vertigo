@@ -1,0 +1,6 @@
+env = Environment()
+env.Append ( CPPFLAGS="-I../../.. -I../.. -I.. -I." )
+env.Program ( target='ConfigurationTest', source=[ 'ConfigurationTest.cpp',
+						   '../src/MultiType.cc',
+						   '../src/MultiTypeToBinary.cc',
+						   '../src/SimpleConfiguration.cc' ] )

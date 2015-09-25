@@ -1,0 +1,4 @@
+Simple btagging test.
+2 jets. Primary vertex at  (0.0014, -0.0049, 8.0162)
+Tagging jet: b -1.00 jet axis: (-40.8725, 27.4721, -33.4809) (pt 49.2471) 13 tracks
+Tagging jet: b 2.60 jet axis: (140.0683, -184.2364, 113.5029) (pt 231.4350) 11 tracks

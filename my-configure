@@ -1,0 +1,1 @@
+./configure CXXFLAGS="-g -O3 -march=native -Wall" HEPMC_DIR=/home/walten/install --prefix=/home/walten/install --disable-hepmc --disable-lcio

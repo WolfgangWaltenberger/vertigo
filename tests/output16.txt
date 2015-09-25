@@ -1,0 +1,35 @@
+[0;32m[LoopSettings] Verbosity is 99 (19 in rave units).[;0m
+[0;32m[LoopSettings] Will log ImportantInfo, Error, Warning, Info, Debug.[;0m
+[0;32m[ObserverManager] trying to obtain EventPrinter[;0m
+[0;32m[ObserverManager] loaded: /home/walten/install/lib/vertigo/obs_EventPrinter.so[;0m
+[0;32m[ObserverManager] enabling Observer EventPrinter[;0m
+[0;32m[main] considering events [0, 0][;0m
+[0;32m[LoopSettings] Verbosity is 99 (19 in rave units).[;0m
+[0;32m[LoopSettings] Will log ImportantInfo, Error, Warning, Info, Debug.[;0m
+[0;32m[BeamSpotSingleton] Currently beamspot info is "split up"[;0m
+[0;32m[BeamSpotSingleton::set]  rxx[um]=32 |rxy|[um]=0 ryy[um]=32 rzz[um]=53000[;0m
+[0;32m[GeneratorManager] loaded: /home/walten/install/lib/vertigo/evtgen_file.so[;0m
+[0;32m[EventLoop] Magnetic Field: (-0.0000, -0.0000, 3.8112) [Tesla] at (0.0000, 0.0000, 0.0000) [cm][;0m
+                            (0.0000, 0.0000, 3.7303) [Tesla] at (0.0000, 0.0000, 200.0000) [cm][;0m
+[;0m
+[0;32m[EventLoop] start looping.[;0m
+[0;32m[LoopThread] Start with event 1[;0m
+[0;32m[VertigoObjectReader] no track associations stored. will associate by pulls[;0m
+[0;32m[LoopThread] Beamspot is at (0.0000+/-0.0032, 0.0000+/-0.0032, 0.0000+/-5.3000) [cm][;0m
+
+     <------------------------------------------------------------>
+
+Contains: 16 simtracks, 2 simvertices, 0 simparticles, 2 tracks, 0 vertices, 
+          0 particles, 0 jets (containing a total of 0 tracks).
+
+SimVertex #0 <primary> "s"  at (-0.0004, 0.0013, -2.2676)
+SimVertex #1 "s"  at (0.0528, 0.0250, -2.3417) [941.754um]
+
+
+Reconstructed vertices:
+-----------------------
+
+   none defined.
+
+
+[EventLoop] ends. Took about 0 ms

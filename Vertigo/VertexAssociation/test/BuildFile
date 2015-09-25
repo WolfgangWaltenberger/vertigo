@@ -1,0 +1,39 @@
+<environment>
+<Group name=G3>
+
+ <Group name=CaloRecHitReader>
+ <Use name=Calorimetry>
+ <Group name=MuonDigiReader>
+ <Use name=Muon>
+ <Group name=TrackerDigiReader>
+ <Use name=Tracker>
+
+
+<lib name=GtfPattern>
+<lib name=TkRecoDebugTools>
+
+<External ref=COBRA Use=GeneratorInterface>
+
+<group name=TrackAnalysis>
+<group name=TkTracks>
+<use name=TrackerReco>
+
+<External ref=COBRA Use=MagneticField>
+
+<group name=RecReader>
+<External ref=COBRA Use=CARF>
+
+<group name=HBook>
+<External ref=COBRA Use=Utilities>
+
+<lib name=VertexPrimitives></lib>
+<lib name=VertexTools></lib>
+<lib name=LinearVertexFit></lib>
+<lib name=PrincipalVertexReco></lib>
+<lib name=VertexFastSim></lib>
+<lib name=VertexSelection></lib>
+<lib name=VertexAssociation></lib>
+
+<bin file=VertexAssociatorTest.cpp>
+</bin>
+</environment>

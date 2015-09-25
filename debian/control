@@ -1,0 +1,49 @@
+Source: vertigo
+Section: science
+Priority: extra
+Maintainer: Wolfgang Waltenberger <waldi@teilchen.at>
+Build-Depends: debhelper (>= 5), autotools-dev, automake, libtool, pkg-config, libsoqt-dev, swig, libdataharvester-dev | dataharvester-dummy, librave-dev | librave-dummy, libboost-filesystem-dev, libboost-program-options-dev, root-system, ravevis
+Standards-Version: 3.7.2
+
+Package: vertigo-bin
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-filesystem1.34.1, libboost-program-options1.34.1
+Recommends: librave | librave-dummy, dataharvester | dataharvester-dummy
+Description: Vertex reconstruction and Interfaces to Generic Objects
+ Vertigo is a simply "dummy" framework for the high energy physics community.
+ Its purpose is to make development of rave algorithms as easy as possible.
+
+Package: python-vertigo
+Architecture: any
+Depends: python, vertigo-bin (= ${Source-Version})
+Description: Vertex reconstruction and Interfaces to Generic Objects
+  This package contains the python wrapper for vertigo.
+
+Package: vertigo-all
+Architecture: any
+Depends: vertigo-bin (= ${Source-Version}), python-vertigo (= ${Source-Version}), vertigo-ravevis (= ${Source-Version}), dataharvester-all, librave-all, vertigo-lcio, vertigo-cms
+Description: Vertex reconstruction and Interfaces to Generic Objects
+ Vertigo is a simply "dummy" framework for the high energy physics community.
+ This is a dummy package that depends on all vertigo components.
+
+Package: vertigo-ravevis
+Architecture: any
+Depends: vertigo-bin (= ${Source-Version}), ravevis
+Description: Vertex reconstruction and Interfaces to Generic Objects
+ Vertigo is a simply "dummy" framework for the high energy physics community.
+ This package contains the visualiser plugin for vertigo.
+
+Package: vertigo-lcio
+Architecture: any
+Depends: vertigo-bin (= ${Source-Version}), lcio1
+Description: Vertex reconstruction and Interfaces to Generic Objects
+ Vertigo is a simply "dummy" framework for the high energy physics community.
+ This package contains the LCIO reader plugin for vertigo.
+
+Package: vertigo-cms
+Architecture: any
+Depends: vertigo-bin (= ${Source-Version}), root-system
+Description: Vertex reconstruction and Interfaces to Generic Objects
+ Vertigo is a simply "dummy" framework for the high energy physics community.
+ This package contains the CMS reader plugin for vertigo.
+

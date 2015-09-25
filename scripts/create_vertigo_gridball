@@ -1,0 +1,47 @@
+#!/bin/sh
+
+# A simple script that creates a vertigo/rave tarball that can be used on the grid.
+
+PREFIX="$1"
+INSTALL=~/afs/grid/vertigo/
+
+test -z "$PREFIX" && PREFIX=/usr/local/
+
+DIR=/tmp/vertigoball
+
+rm -rf ${DIR}
+mkdir ${DIR}
+VERTIGO=`which vertigo`
+cp $VERTIGO ${DIR}
+
+TMP=`pkg-config dataharvester --libs-only-L | sed -e 's/-L//' | sed -e 's/ *$//'` 
+echo "TMP=$TMP"
+DHDIR=$TMP/dataharvester
+
+echo "DHDIR=$DHDIR"
+cp ${DHDIR}/txt.so ${DIR}
+XML=${DHDIR}/xml.so
+cp ${XML} ${DIR}
+
+GZ=${DHDIR}/gz.so
+cp ${GZ} ${DIR}
+
+VERTIGOFILES=`ldd $VERTIGO | sed -e 's/.*=> //' | sed -e 's/ .*//' | sed -e 's/ *//'`
+XMLFILES=`ldd $XML | sed -e 's/.*=> //' | sed -e 's/ .*//' | sed -e 's/ *//'`
+GZFILES=`ldd $GZ | sed -e 's/.*=> //' | sed -e 's/ .*//' | sed -e 's/ *//'`
+
+for i in $VERTIGOFILES $XMLFILES $GZFILES; do
+  cp $i ${DIR}
+done
+
+VTDIR=$PREFIX/lib/vertigo
+cp ${VTDIR}/obs_BTagAnalyser.so ${VTDIR}/evtgen_file.so ${DIR}
+
+strip ${DIR}/*
+
+cd ${DIR} && tar czvf /tmp/vertigo.tar.gz .
+test -d ${INSTALL} &&
+{
+	echo "Copying gridball to ${INSTALL}"
+	cp /tmp/vertigo.tar.gz ${INSTALL}
+}

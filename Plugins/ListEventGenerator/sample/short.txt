@@ -1,0 +1,3 @@
+# only "name" is obligatory! all other columns are optional.
+source: name=1.slcio; collection=FittedTrueTracksMCP; type=lcio; skip=0.
+source: name=2.slcio; collection=FittedTrueTracksMCP; type=lcio; skip=0.

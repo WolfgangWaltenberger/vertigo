@@ -1,0 +1,26 @@
+Tests kalman, avf, and mvf against one event. Checks if output changes.
+kalman no beamspot:
+pos=( -0.0016, 0.0047, -2.2706 ) chi2=707.2 ndf=31.0
+avf-smoothing:0 no beamspot:
+pos=( -0.0004, 0.0032, -2.2685 ) chi2=23.8 ndf=18.4
+avf-smoothing:1 no beamspot:
+pos=( -0.0004, 0.0032, -2.2685 ) chi2=23.8 ndf=18.4
+avr-primcut:2.0-seccut:6.0-smoothing:0-weightthreshold:0.001 no beamspot:
+pos=( -0.0003, 0.0035, -2.2689 ) chi2=11.1 ndf=12.1
+pos=( -0.0026, 0.0054, -2.2655 ) chi2=59.2 ndf=6.9
+pos=( 0.2730, 0.0939, -2.5375 ) chi2=12.2 ndf=-0.4
+avr-primcut:2.0-seccut:6.0-smoothing:0-weightthreshold:0.01 no beamspot:
+pos=( -0.0003, 0.0035, -2.2689 ) chi2=11.1 ndf=12.1
+pos=( -0.0026, 0.0054, -2.2655 ) chi2=59.2 ndf=6.9
+pos=( 0.2730, 0.0939, -2.5375 ) chi2=12.2 ndf=-0.4
+tkf no beamspot:
+pos=( -0.0005, 0.0041, -2.2694 ) chi2=15.8 ndf=17.0
+pos=( 0.0133, 0.0066, -2.2762 ) chi2=1.8 ndf=1.0
+pos=( 0.0568, 0.0256, -2.3487 ) chi2=2.7 ndf=1.0
+avr beamspot:
+pos=( -0.0004, 0.0032, -2.2685 ) chi2=23.8 ndf=18.4
+pos=( 0.0549, 0.0246, -2.3469 ) chi2=3.2 ndf=2.8
+tkf beamspot:
+pos=( -0.0005, 0.0041, -2.2694 ) chi2=15.8 ndf=17.0
+pos=( 0.0133, 0.0066, -2.2762 ) chi2=1.8 ndf=1.0
+pos=( 0.0568, 0.0256, -2.3487 ) chi2=2.7 ndf=1.0

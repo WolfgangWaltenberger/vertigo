@@ -1,0 +1,4 @@
+Import( 'env' )
+
+m = env.Copy( LIBS = [ 'CommonTools', 'RaveEnvironment', 'Geometry', 'RecoVertex', 'TrackingTools', 'FWCore', 'CLHEP', 'RaveInterface', 'Vertigo', 'CMSSkin' ] )
+m.Program ( target = '../HarvestTest', source = [ 'HarvestTest.cpp' ] )

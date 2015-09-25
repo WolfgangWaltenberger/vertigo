@@ -1,0 +1,30 @@
+
+     <------------------------------------------------------------>
+
+Contains: 10 simtracks, 1 simvertices, 0 simparticles, 10 tracks, 1 vertices, 
+          0 particles, 0 jets (containing a total of 0 tracks).
+
+SimVertex <primary> at (-0.0000, -0.0000, -0.4383)  (rectible)
+
+
+Reconstructed vertices:
+-----------------------
+
+Vertex at (-0.0049, 0.0017, -0.4390) chi2=11.0 ndf=17.0 [51.927um]
+    `-- associated with SimVertex [51.927um, 1.0s off]
+10 associated tracks.
+
+
+     <------------------------------------------------------------>
+
+Contains: 10 simtracks, 1 simvertices, 0 simparticles, 10 tracks, 0 vertices, 
+          0 particles, 0 jets (containing a total of 0 tracks).
+
+SimVertex <primary> at (-0.0000, -0.0000, -0.4383)  (rectible)
+
+
+Reconstructed vertices:
+-----------------------
+
+   none defined.
+
