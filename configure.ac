@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.60)
-AC_INIT(vertigo, 0.3.3, walten@hephy.oeaw.ac.at)
+AC_INIT(vertigo, 0.3.4, wolfgang.waltenberger@gmail.com)
 AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE([subdir-objects])
 AC_CONFIG_SRCDIR([Vertigo/Event/interface/Event.h])

@@ -19,6 +19,9 @@ vertigo_LDFLAGS = $(RAVE_LIBS) -ldl  $(BOOST_FILESYSTEM_LIB) $(BOOST_LDFLAGS) $(
 ../VertigoHarvest/libVertigoHarvest.la:
 	cd ../VertigoHarvest && make libVertigoHarvest.la
 
+../tools/libVertigoTools.la:
+	cd ../tools && make libVertigoTools.la
+
 
 ##############################################
 

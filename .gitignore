@@ -218,3 +218,8 @@ stamp-h1
 tools/Makefile
 tools/Makefile.in
 tools/src/.deps/
+missing
+Vertigo/vertigo
+tools/.libs/
+tools/src/.dirstamp
+
