@@ -267,3 +267,13 @@ Plugins/Visualiser/.libs/
 Plugins/Visualiser/src/.dirstamp
 cpp_application/.libs/
 cpp_application/propagatorTest
+*/.libs
+*/*/.libs
+*/.deps
+*/.dirstamp
+*/*/.dirstamp
+*/*/*/.dirstamp
+*/*/*/*/.dirstamp
+python/vertigo.cc
+python/vertigo.h
+python/vertigo.py
