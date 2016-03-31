@@ -131,4 +131,3 @@ class RaveVertexing :
 } // namespace marlinrave
 
 #endif
-
